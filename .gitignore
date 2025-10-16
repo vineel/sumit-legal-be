@@ -1,0 +1,41 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/*
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Runtime data
+lib-cov
+coverage/
+.cache/
+.nyc_output/
+
+
+# Build outputs
+dist/
+build/
+.tmp/
+.temp/
+.cache/
+
+# IDE and OS files
+.DS_Store
+*.swp
+*.swo
+*.swn
+*.swp
+.idea/
+.vscode/
+*.iml
+
+# AWS credentials backup (never commit)
+.aws/
