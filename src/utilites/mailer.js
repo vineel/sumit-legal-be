@@ -4,8 +4,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.GMAIL_USER || "developer.expinator@gmail.com",
-    pass: process.env.GMAIL_PASS || "jjhj xmtn xevz bqpa",
+    user: process.env.MAILGUN_USER || "developer.expinator@gmail.com",
+    pass: process.env.MAILGUN_PASS || "jjhj xmtn xevz bqpa",
   },
 });
 
@@ -22,7 +22,7 @@ transporter.verify((error) => {
 const sendMail = async (to, subject, html) => {
   try {
     const info = await transporter.sendMail({
-      from: `"IBD Contracting" <${process.env.GMAIL_USER || "developer.expinator@gmail.com"}>`,
+      from: `"IBD Contracting" <${process.env.MAILGUN_USER || "developer.expinator@gmail.com"}>`,
       to,
       subject,
       html,
