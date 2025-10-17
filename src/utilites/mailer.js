@@ -11,6 +11,12 @@ const transporter = nodemailer.createTransport({
 });
 */
 
+console.log("MAILGUN_USER: ", process.env.MAILGUN_USER);
+console.log("MAILGUN_PASSWORD: ", process.env.MAILGUN_PASSWORD);
+
+console.err("MAILGUN_USER: ", process.env.MAILGUN_USER);
+console.err("MAILGUN_PASSWORD: ", process.env.MAILGUN_PASSWORD);
+
 // ✅ Configure Mailgun SMTP (port 2525 works on your server)
 const transporter = nodemailer.createTransport({
   host: "smtp.mailgun.org",
